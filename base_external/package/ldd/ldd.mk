@@ -4,7 +4,7 @@ LDD_SITE_METHOD = git
 
 # build the misc-modules kernel modules
 define LDD_BUILD_CMDS
-    $(MAKE) $(TARGET_CONFIGURE_OPTS) -C $(@D)/misc-modules
+    $(MAKE) -C $(@D)/misc-modules
 endef
 
 define LDD_INSTALL_CMDS
