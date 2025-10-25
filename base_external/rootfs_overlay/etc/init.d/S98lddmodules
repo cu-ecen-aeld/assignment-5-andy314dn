@@ -16,7 +16,7 @@ NC='\033[0m' # No Color
 case "$1" in
     start)
         printf "${GREEN}Loading scull driver...${NC}\n"
-        modprobe scull
+        /etc/init.d/scull_load
         printf "${BLUE}Loading faulty driver...${NC}\n"
         modprobe faulty
         printf "${RED}Loading hello module...${NC}\n"
@@ -28,7 +28,7 @@ case "$1" in
         printf "${BLUE}Unloading faulty driver...${NC}\n"
         rmmod faulty
         printf "${GREEN}Unloading scull driver...${NC}\n"
-        rmmod scull
+        /etc/init.d/scull_unload
         ;;
     *)
         printf "Usage: $0 {start|stop}\n"
