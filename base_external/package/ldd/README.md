@@ -15,8 +15,10 @@ To complete the above step, follow these detailed instructions:
      ```
 
 2. **Create the Package Makefile**:
-   - Inside the `ldd` directory, create a file named `Config.in` to define the package configuration. This file should include options for enabling the `misc-modules` and `scull` components.
-   - Create a `ldd.mk` file that contains the build instructions for your package. This file should specify how to compile and install the `misc-modules` and `scull` components. Here’s a basic structure you can use:
+   - Inside the `ldd` directory, create a file named `Config.in` to define the package configuration.
+        - This file should include options for enabling the `misc-modules` and `scull` components.
+   - Create a `ldd.mk` file that contains the build instructions for your package.
+        - This file should specify how to compile and install the `misc-modules` and `scull` components. Here’s a basic structure you can use:
 
      ```makefile
      LDD_VERSION = 1.0
