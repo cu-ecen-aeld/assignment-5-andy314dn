@@ -18,7 +18,7 @@ case "$1" in
         printf "${GREEN}Loading scull driver...${NC}\n"
         /etc/init.d/scull_load
         printf "${BLUE}Loading faulty driver...${NC}\n"
-        modprobe faulty
+        /etc/init.d/module_load
         printf "${RED}Loading hello module...${NC}\n"
         modprobe hello
         ;;
@@ -26,7 +26,7 @@ case "$1" in
         printf "${RED}Unloading hello module...${NC}\n"
         rmmod hello
         printf "${BLUE}Unloading faulty driver...${NC}\n"
-        rmmod faulty
+        /etc/init.d/module_unload
         printf "${GREEN}Unloading scull driver...${NC}\n"
         /etc/init.d/scull_unload
         ;;
