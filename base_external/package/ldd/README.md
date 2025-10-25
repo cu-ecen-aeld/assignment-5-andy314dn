@@ -84,7 +84,7 @@ By following these steps, you will successfully add the `ldd` package to your Bu
 
 > Use a rootfs overlay in buildroot to add an init module script named `"S98lddmodules"`.
 Be sure to specify a **relative path in buildroot menuconfig to support builds outside your working directory**.
-For instance, use `../base_external/rootfs_overlay` to locate in a `rootfs_overlay` directory you add to your base_external directory.
+For instance, use `../base_external/rootfs_overlay` to locate in a `rootfs_overlay` directory you add to your `base_external` directory.
 Add init scripts to the appropriate paths within this overlay to:
 
 > * i. Perform operations on startup to load the scull driver and on shutdown to unload.
