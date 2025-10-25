@@ -1,0 +1,34 @@
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides:          lddmodules
+# Required-Start:    $local_fs $network
+# Required-Stop:     $local_fs $network
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Load ldd kernel modules
+### END INIT INFO
+
+case "$1" in
+    start)
+        echo "Loading scull driver..."
+        modprobe scull
+        echo "Loading faulty driver..."
+        modprobe faulty
+        echo "Loading hello module..."
+        modprobe hello
+        ;;
+    stop)
+        echo "Unloading hello module..."
+        rmmod hello
+        echo "Unloading faulty driver..."
+        rmmod faulty
+        echo "Unloading scull driver..."
+        rmmod scull
+        ;;
+    *)
+        echo "Usage: $0 {start|stop}"
+        exit 1
+        ;;
+esac
+
+exit 0
